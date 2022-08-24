@@ -1,0 +1,32 @@
+<p>vue-name works!</p>
+
+
+<div> liste de noms :</div>
+
+<div>
+
+  <ul  id="names" name="names" >
+    <li *ngFor="let e of listeDonneur" >{{e?.name}}</li>
+  </ul>
+
+</div>
+
+<div>
+    <button (click)="goAlgo()"> Lancer l'algo</button>
+</div>
+
+<hr>
+
+<div>
+    <!-- Affiche la selection-->
+    <table>
+        <tr>
+            <th>Donneur</th>
+            <th>Receveur</th>
+        </tr>
+        <tr *ngFor="let e of mapResult">
+                <td>{{e?.donneur?.name}}</td>
+                <td>{{e?.receveur?.name}}</td>
+        </tr>
+    </table>
+</div>
